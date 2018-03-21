@@ -1018,7 +1018,7 @@ $hxClasses["ApplicationMain"] = ApplicationMain;
 ApplicationMain.__name__ = ["ApplicationMain"];
 ApplicationMain.main = function() {
 	var projectName = "NewProject";
-	var config = { build : "25", company : "sigmal00", file : "NewProject", fps : 60, name : "TrinityTrial", orientation : "", packageName : "TrinityTrial", version : "1.0.0", windows : [{ allowHighDPI : false, alwaysOnTop : false, antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 480, hidden : null, maximized : null, minimized : null, parameters : { }, resizable : true, stencilBuffer : true, title : "TrinityTrial", vsync : false, width : 800, x : null, y : null}]};
+	var config = { build : "30", company : "sigmal00", file : "NewProject", fps : 60, name : "TrinityTrial", orientation : "", packageName : "TrinityTrial", version : "1.0.0", windows : [{ allowHighDPI : false, alwaysOnTop : false, antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 480, hidden : null, maximized : null, minimized : null, parameters : { }, resizable : true, stencilBuffer : true, title : "TrinityTrial", vsync : false, width : 800, x : null, y : null}]};
 	lime_system_System.__registerEntryPoint(projectName,ApplicationMain.create,config);
 };
 ApplicationMain.create = function(config) {
@@ -3271,7 +3271,6 @@ var Game = function(game) {
 	Game.width = this.panorama.get_width();
 	Game.height = this.panorama.get_height();
 	game.addChild(this.panorama);
-	game.stage.addEventListener("enterFrame",$bind(this,this.update));
 	game.stage.set_frameRate(60);
 	game.set_scrollRect(new openfl_geom_Rectangle(0,0,this.panorama.get_width(),this.panorama.get_height()));
 	game.addChild(this.field);
@@ -3281,6 +3280,7 @@ var Game = function(game) {
 	this.field.addChild(this.actorMediator.container);
 	this.field.set_scaleX(2.0);
 	this.field.set_scaleY(2.0);
+	game.stage.addEventListener("enterFrame",$bind(this,this.update));
 };
 $hxClasses["Game"] = Game;
 Game.__name__ = ["Game"];
@@ -31158,7 +31158,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 688812;
+	this.version = 721756;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = ["lime","utils","AssetCache"];
